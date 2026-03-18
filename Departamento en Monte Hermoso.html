@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<!-- saved from url=(0096)file:///C:/Users/USUARIO/Downloads/pagina%20web%20depto/Departamento%20en%20Monte%20Hermoso.html -->
+<html lang="es"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Departamento en Monte Hermoso</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f5f5f5;
+}
+
+/* PORTADA */
+.hero {
+    background-image: url('playa.jpg');
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.hero h1 {
+    background: rgba(0,0,0,0.5);
+    padding: 15px 25px;
+    border-radius: 10px;
+}
+
+/* CONTENIDO */
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+}
+
+h2 {
+    color: #2c3e50;
+}
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.galeria img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.boton {
+    display: block;
+    text-align: center;
+    background: #25D366;
+    color: white;
+    padding: 15px;
+    margin-top: 20px;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+}
+</style>
+
+</head>
+<body>
+
+<div class="hero">
+    <h1>Departamento en Monte Hermoso<br>Zona céntrica • Con cochera
+<br>
+Bahia Blanca 76</h1>
+</div>
+
+<div class="container">
+
+    <div class="card">
+        <h2>📸 El departamento por dentro</h2>
+        <div class="galeria">
+    <img src="./Departamento en Monte Hermoso_files/habitacion.jpg">
+    <img src="./Departamento en Monte Hermoso_files/comedor1.jpg">
+    <img src="./Departamento en Monte Hermoso_files/comedor2.jpg">
+    <img src="./Departamento en Monte Hermoso_files/bano3.jpg"><img src="./Departamento en Monte Hermoso_files/bano2.jpg">
+    <img src="./Departamento en Monte Hermoso_files/lavarropas.jpg">
+    <img src="./Departamento en Monte Hermoso_files/cochera.jpg">
+    <img src="./Departamento en Monte Hermoso_files/balcon.jpg">
+    <img src="./Departamento en Monte Hermoso_files/cocina1.jpg">
+    
+<img src="./Departamento en Monte Hermoso_files/cocina2.jpg"></div>
+    <span class="cerrar">×</span>
+    <img id="imgGrande">
+
+    </div>
+
+    <div class="card">
+        <h2>📝 Descripción</h2>
+        <p>
+            Departamento ubicado en zona céntrica de Monte Hermoso, ideal para vacaciones.
+            Cuenta con living con cucheta triple, habitación matrimonial, cocina equipada,
+            baño completo, zoom con parrilla y cochera incluida.
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>🏠 Características</h2>
+        <ul>
+            <li>40 mts cuadrados</li>
+            <li>Living con cucheta triple</li>
+            <li>Habitación matrimonial</li>
+            <li>Cocina equipada</li>
+            <li>Baño completo</li>
+            <li>Cochera incluida</li>
+            <li>Ubicación céntrica en Bahia Blanca 76</li>
+            <li>A cuatro cuadras de la playa</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>💰 Precio</h2>
+        <p>Desde 150.000$ por noche (consultar al numero de telefono)</p>
+    </div>
+
+    <a class="boton" href="https://wa.me/542915015593" target="_blank">
+        📲 Consultar por WhatsApp
+    </a>
+
+</div>
+
+<script>
+const imagenes = document.querySelectorAll('.galeria img');
+const fullscreen = document.getElementById('fullscreen');
+const imgGrande = document.getElementById('imgGrande');
+const cerrar = document.querySelector('.cerrar');
+
+imagenes.forEach(img => {
+    img.addEventListener('click', () => {
+        fullscreen.style.display = 'flex';
+        imgGrande.src = img.src;
+    });
+});
+
+cerrar.onclick = () => {
+    fullscreen.style.display = 'none';
+};
+
+fullscreen.onclick = (e) => {
+    if (e.target === fullscreen) {
+        fullscreen.style.display = 'none';
+    }
+};
+</script>
+
+
+</body></html>
